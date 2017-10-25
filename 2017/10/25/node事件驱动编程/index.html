@@ -94,13 +94,17 @@
 
 
 
-<meta property="og:type" content="website">
+<meta name="description" content="说到事件驱动编程，得要先介绍下传统编程的风格。 1.阻塞式编程模型：  特点是“单用户，单进程”，为了使用户之间相互隔离，每一个进程都对应着一个用户，用户在决定下一个操作之前，必须要先结束一个操作。 2.多线程编程模型: 线程可以看成一种轻量级的进程，它与同一进程内的其他线程共享内存。线程可以中断，之后又可以恢复执行。当一个线程等待I/O操作时，另一个进程就可以接管CPU，等待线程将在I/O操作结">
+<meta property="og:type" content="article">
 <meta property="og:title" content="GIS-cyw">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/10/25/node事件驱动编程/index.html">
 <meta property="og:site_name" content="GIS-cyw">
+<meta property="og:description" content="说到事件驱动编程，得要先介绍下传统编程的风格。 1.阻塞式编程模型：  特点是“单用户，单进程”，为了使用户之间相互隔离，每一个进程都对应着一个用户，用户在决定下一个操作之前，必须要先结束一个操作。 2.多线程编程模型: 线程可以看成一种轻量级的进程，它与同一进程内的其他线程共享内存。线程可以中断，之后又可以恢复执行。当一个线程等待I/O操作时，另一个进程就可以接管CPU，等待线程将在I/O操作结">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-10-25T13:05:42.014Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GIS-cyw">
+<meta name="twitter:description" content="说到事件驱动编程，得要先介绍下传统编程的风格。 1.阻塞式编程模型：  特点是“单用户，单进程”，为了使用户之间相互隔离，每一个进程都对应着一个用户，用户在决定下一个操作之前，必须要先结束一个操作。 2.多线程编程模型: 线程可以看成一种轻量级的进程，它与同一进程内的其他线程共享内存。线程可以中断，之后又可以恢复执行。当一个线程等待I/O操作时，另一个进程就可以接管CPU，等待线程将在I/O操作结">
 
 
 
@@ -129,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/25/node事件驱动编程/"/>
 
 
 
 
 
-  <title>GIS-cyw</title>
+  <title> | GIS-cyw</title>
   
 
 
@@ -160,9 +164,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -245,9 +247,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -277,9 +279,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/10/25/node事件驱动编程/" itemprop="url">未命名</a></h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -329,9 +329,7 @@
       
 
       
-        
-          
-            <p>说到事件驱动编程，得要先介绍下传统编程的风格。</p>
+        <p>说到事件驱动编程，得要先介绍下传统编程的风格。</p>
 <p>1.阻塞式编程模型：</p>
 <p> 特点是“单用户，单进程”，为了使用户之间相互隔离，每一个进程都对应着一个用户，用户在决定下一个操作之前，必须要先结束一个操作。</p>
 <p>2.多线程编程模型:</p>
@@ -352,8 +350,6 @@
 <p>传统的web server多为基于线程模型。你启动Apache或者什么server，它开始等待接受连接。当收到一个连接，server保持连接连通直到页面或者什么事务请求完成。如果他需要花几微妙时间去读取磁盘或者访问数据库，web server就阻塞了IO操作（这也被称之为阻塞式IO).想提高这样的web server的性能就只有启动更多的server实例。相反的，Node.Js使用事件驱动模型，当web server接收到请求，就把它关闭然后进行处理，然后去服务下一个web请求。当这个请求完成，它被放回处理队列，当到达队列开头，这个结果被返回给用户。这个模型非常高效可扩展性非常强，因为webserver一直接受请求而不等待任何读写操作。（这也被称之为非阻塞式IO或者事件驱动IO）  </p>
 <p>简要概括：web server 监听请求后，异步执行io操作的同时，web server主程继续监听请求，因此不会造成IO阻塞。</p>
 
-          
-        
       
     </div>
     
@@ -370,140 +366,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/25/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cyw">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="GIS-cyw">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/10/25/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-25T19:16:45+08:00">
-                2017-10-25
-              </time>
+              <a href="/2017/10/25/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -513,10 +397,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -524,6 +409,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -702,10 +591,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
