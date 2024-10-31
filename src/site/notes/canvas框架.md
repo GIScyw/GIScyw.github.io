@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/canvas框架/","title":"333","tags":["code"],"created":"2024-10-15"}
+{"dg-publish":true,"permalink":"/canvas框架/","title":"333","tags":["code"]}
 ---
 
 与Canvas有关的框架有许多，它们具有不同的特点和使用场景：
