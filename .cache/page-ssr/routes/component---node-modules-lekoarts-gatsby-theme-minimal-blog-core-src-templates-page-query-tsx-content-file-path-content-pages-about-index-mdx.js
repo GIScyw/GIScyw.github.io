@@ -24,7 +24,7 @@ function _createMdxContent(props) {
     p: "p",
     a: "a"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__.useMDXComponents)(), props.components);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components.p, null, "Hi!"), "\n", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components.p, null, "I'm LekoArts, a designer turned software engineer passionate about open source & teaching. Learn more about Gatsby & React on ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components.a, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components.p, null, "Hi!"), "\n", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components.p, null, "I'm Zombie, a designer turned software engineer passionate about open source & teaching. Learn more about Gatsby & React on ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components.a, {
     href: "https://www.lekoarts.de?utm_source=minimal-blog&utm_medium=Starter"
   }, "my website"), "."));
 }
@@ -1848,7 +1848,7 @@ var d=(e="")=>e.split("language-").pop(),h=e=>{if(e?.children?.props){let{childr
 /***/ ((module) => {
 
 "use strict";
-module.exports = /*#__PURE__*/JSON.parse('{"data":{"site":{"siteMetadata":{"siteTitle":"Minimal Blog","siteTitleAlt":"Minimal Blog - Gatsby Theme","siteHeadline":"Minimal Blog - Gatsby Theme from @lekoarts","siteUrl":"https://minimal-blog.lekoarts.de","siteDescription":"Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.","siteImage":"/banner.jpg","siteLanguage":"en","author":"@lekoarts_de"}}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"data":{"site":{"siteMetadata":{"siteTitle":"Zombie Blog","siteTitleAlt":"Minimal Blog - Gatsby Theme","siteHeadline":"Minimal Blog - Gatsby Theme from @lekoarts","siteUrl":"https://minimal-blog.lekoarts.de","siteDescription":"Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.","siteImage":"/banner.jpg","siteLanguage":"en","author":"@lekoarts_de"}}}}');
 
 /***/ }),
 
