@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/css in js/","created":"2023-12-02T22:45:24.168+08:00"}
+{"dg-publish":true,"permalink":"/css in js/","title":"234","tags":["code"],"created":"2023-12-02T22:45:24.168+08:00"}
 ---
 
 
