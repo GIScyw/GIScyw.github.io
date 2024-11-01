@@ -12,6 +12,7 @@ babel 是 source to source 的转换，babel 就是一个 Javascript Transpiler�
 
 1.  parse 的过程其实就是`分词` + `组装 AST`这两步（一般叫词法分析和语法分析）。 JS  parser 的历史，基于火狐浏览器的 JS 引擎 `SpiderMonkey` 的 AST 标准，制定了 `espree` 的标准，最早的 `estree` 标准的实现是 `esprima`，但是随着 es2015 开始一年一个版本，`esprima` 的迭代速度逐渐跟不上了，这时候 `acorn` 流行起来，因为速度更快，而且支持插件扩展，于是 `espree`、`babel parser(babylon)` 等都基于 `acorn` 来实现各自的 parser。虽然 `estree` 系列的 js parser 挺多的，但也不是全部，`terser`、`typescript` 等都是用自己的 AST。babel parser 能不断地支持新的语法，就是通过修改词法分析、语法分析阶段的代码来实现的。其实现在 babel parser 的代码里已经看不到`acorn` 的依赖了，因为在 babel4 以后，babel 直接 fork 了 `acorn` 的代码来修改，而不是引入 `acorn` 包再通过插件扩展的方式。但是，原理还是一样的
 
+
 **常见parser如下**
 - babel 用于 es next、flow、typescript、jsx 等语法转目标环境支持的 js
 - typescript 用于处理 typescript 语法，并进行类型检查，然后转成 es5 或者 es3
@@ -26,6 +27,7 @@ babel 是 source to source 的转换，babel 就是一个 Javascript Transpiler�
 2. 源码 parse 成 AST 之后，需要进行 AST 的遍历和增删改（transform）。那么 transform 的流程是什么样的？babel 会递归遍历 AST，遍历过程中处理到不同的 AST 会调用不同的 visitor 函数来实现 transform。这其实是一种设计模式，叫做访问者模式
 3.  generate 就是递归打印 AST 成字符串，在递归打印的过程中会根据源码位置和计算出的目标代码的位置来生成 mapping，加到 sourcemap 中。 sourcemap 是源码和目标代码的映射，用于开发时调试源码和生产时定位线上错误。 babel 通过 source-map 这个包来生成的 sourcemap
 4. @babel/code-frame 包是 babel 用来打印错误信息的，别的工具（比如 eslint、tsc）也会打印 code frame 的格式，原理一样
+
 
 
 ### babel能用来干什么
