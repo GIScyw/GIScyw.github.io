@@ -11,7 +11,7 @@
     "develop": "gatsby develop",
     "develop:cypress": "cross-env CYPRESS_SUPPORT=y yarn develop",
     "build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
-    "start": "gatsby develop",
+    "start": "node mdxReplace.js && gatsby clean && gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
